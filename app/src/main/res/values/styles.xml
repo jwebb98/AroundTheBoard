@@ -1,0 +1,15 @@
+<resources>
+
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">#FF3D00</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+    <style name="Main_MenuTheme" parent="Theme.AppCompat.NoActionBar">
+        263238<item name="colorPrimary">#000000</item>
+    </style>
+</resources>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#757575"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/txt_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignBottom="@+id/hit_btn"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="36dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Score:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txt_scoreOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignBaseline="@+id/txt_scoreOutOf"
+        android:layout_alignBottom="@+id/txt_scoreOutOf"
+        android:layout_marginStart="44dp"
+        android:layout_toEndOf="@+id/txt_score"
+        android:fontFamily="sans-serif-condensed"
+        android:text="0"
+        android:textAllCaps="true"
+        android:textColor="#000"
+        android:textSize="40sp" />
+
+
+    <TextView
+        android:id="@+id/txt_forwardSlash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignBaseline="@+id/txt_score"
+        android:layout_alignBottom="@+id/txt_score"
+        android:layout_marginStart="48dp"
+        android:layout_toEndOf="@+id/txt_scoreOn"
+        android:fontFamily="sans-serif-condensed"
+        android:text="/"
+        android:textColor="@android:color/background_dark"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/txt_scoreOutOf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/hit_btn"
+        android:layout_marginStart="35dp"
+        android:layout_toEndOf="@+id/txt_forwardSlash"
+        android:fontFamily="sans-serif-condensed"
+        android:text="21"
+        android:textAllCaps="true"
+        android:textColor="#000"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/txt_double"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBaseline="@+id/miss_btn"
+        android:layout_alignBottom="@+id/miss_btn"
+        android:layout_alignStart="@+id/txt_scoreOn"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Double:"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/txt_doubleon"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+
+
+        android:layout_below="@+id/txt_double"
+        android:layout_marginEnd="19dp"
+        android:layout_toStartOf="@+id/miss_btn"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:text="1"
+        android:textAllCaps="true"
+        android:textColor="#000"
+        android:textSize="48sp" />
+
+    <Button
+        android:id="@+id/hit_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/hit_button_border"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="hitscore"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:text="Hit"
+        android:textAllCaps="false"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/miss_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/hit_btn"
+        android:layout_below="@+id/txt_scoreOutOf"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/miss_button_border"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="MissScore"
+        android:paddingLeft="25dp"
+        android:paddingRight="32dp"
+        android:text="Miss"
+        android:textAllCaps="false"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/menu_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignEnd="@+id/reset_btn"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#FF3D00"
+        android:fontFamily="sans-serif-condensed"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Main Menu >"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txt_doubleon"
+        android:layout_alignStart="@+id/miss_btn"
+        android:layout_marginStart="9dp"
+        android:backgroundTint="#FF3D00"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="ResetScore"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Reset Score"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+</RelativeLayout>
+
